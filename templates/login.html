@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        *{
+          margin: 0; 
+          padding: 0;
+          box-sizing: border-box;
+
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 12%;
+            padding:20px 120px ;
+            padding-left: 5%;
+            background: #11141a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .logo{
+            font-size: 50px;
+            color: aliceblue;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav a{
+            font-size: 15px;
+            color: aliceblue;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+        nav a:hover{
+            color:#0ef;
+        }
+        .container{
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1f242d;
+            color: #fff;
+            font-weight: 700;
+        }
+        /* section:nth-child(odd){
+            background: red;
+        }
+         */
+      
+        
+        
+        
+       
+        .container{
+            width: 100%;
+            height: 80vh;
+            background-image: url("../static/image6.jpg");
+            background-size: cover;
+            background-position: center;
+            /* background-color: rgba(0, 0, 0, 0.8); */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            height: 100vh;
+            /* position: absolute; */
+            padding-top: 200px;
+        }
+        
+        .text {
+            text-align: center;
+            padding: 170px 50px;
+            color:black;
+            
+            animation: ani 1s;
+        }
+        
+        .text h2 {
+            font-size: 70px;
+            margin-bottom: 30px;
+        }
+        
+        @keyframes ani {
+            0% {
+                transform: scale(0.45);
+            }
+            100% {
+                transform: scale();
+            }
+        }
+        
+        .text p {
+            font-size: 70px;
+            margin-bottom: 30px;
+        }
+        
+       .text{
+        text-shadow: 4px 4px 4px pink;
+       }
+        
+        
+        
+        .up {
+            color: orangered;
+            padding-bottom: 40px;
+            padding-left: 10px;
+            width: 90%;
+        }
+        .text p {
+            font-size: 70px;
+            margin-bottom: 30px;
+        }
+        .text{
+            color: black;
+        text-shadow: 4px 4px 4px pink;
+       }
+        
+        
+        
+        .up {
+            color: orangered;
+            padding-bottom: 40px;
+            padding-left: 10px;
+            width: 90%;
+        }
+        
+        .lognform {
+            text-align: center;
+            padding-bottom: 80px;
+            padding-left: 10px;
+            width: 90%;
+        }
+        
+        h1 {
+            color: orangered;
+            padding-top: 40px;
+        }
+        
+        .row {
+            padding-top: 40px;
+        }
+        
+        .btn {
+            padding-top: 50px;
+        }
+        
+        .sub {
+            background-color: orangered;
+            color: #fff;
+            width: 100px;
+            height: 30px;
+            border-radius: 7px;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+            transition: 1s fade;
+        }
+        
+        .sub:hover {
+            color: orangered;
+            background-color: white;
+            width: 150px;
+            box-shadow: 5px 5px 20px black;
+            cursor: pointer;
+        }
+        
+        .box {
+            width: 15%;
+            height: 5vh;
+            color: black;
+        }
+        .text p {
+            font-size: 70px;
+            margin-bottom: 30px;
+        }
+        .text{
+            color: black;
+        text-shadow: 4px 4px 4px pink;
+       }
+       .active{
+        color: rebeccapurple;
+       }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href=" " class="logo" >STOCK MARKET</a>
+
+        <nav>
+            <a href="/home">HOME</a>
+            <a href="/register">REGISTER</a>
+            <a href="/login" class="active">LOGIN</a>
+            <a href="/abstract">ABSTRACT</a>
+       
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            
+                <div class="text">
+                    <h2><span class="class"> PREDICTING STOCK MARKET TRENDS</span></h2>
+                    <p> USING DIFFERENT ALGORITHM</p>
+                </div>
+            
+        </div>   
+    </section>
+
+    <form action="/loginaction" method="POST" autocomplete="off">
+        <div class="lognform">
+            <h1>LOGIN</h1>
+            <div class="row">
+                <h2>Username</h2>
+                <input type="text" class="box" placeholder="Enter username" name="username" />
+            </div>
+            <div class="row">
+                <h2>Password</h2>
+                <input type="password" class="box" placeholder="Enter password" name="password" />
+            </div>
+            <div class="btn">
+                <input type="submit" class="sub" value="LOGIN">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: url("../static/images1.html");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            padding-top: 50px;
+            width: 50%;
+            max-width: 650px;
+            background: rgb(0, 0, 0, 0.5);
+            padding: 28px;
+            margin: 0 28px;
+            border-radius: 10px;
+            box-shadow: inset- 2px 2px 2px white;
+        }
+        
+        .formtitle {
+            padding-top: 100px;
+            font-size: 26px;
+            font-weight: 600;
+            text-align: center;
+            padding-bottom: 6px;
+            color: blue;
+            text-shadow: 2px 2px 2px black;
+            border-bottom: solid 1px white;
+        }
+        
+        .main-user-info {
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            justify-content: center;
+            padding: 10px 0;
+            align-items: center;
+        }
+        
+        .user-input-box :nth-child(2n) {
+            justify-content: end;
+        }
+        /* .user-input-box {
+            /* display: flex;
+            flex-wrap: wrap; */
+        /* width: 50%;
+        padding-bottom: 15px; */
+        /* } */
+        
+        .user-input-box label {
+            width: 95%;
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            margin: 5px 0;
+        }
+        
+        .user-input-box input {
+            height: 40px;
+            width: 60%;
+            border-radius: 7px;
+            outline: none;
+            border: 1px solid grey;
+            padding: 0 10px;
+        }
+        
+        .form-submit-btn {
+            margin-top: 40px;
+        }
+        
+        .form-submit-btn input {
+            /* display: block; */
+            width: 30%;
+            margin-top: 10px;
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            color: black;
+            background: yellow;
+        }
+        
+        .form-submit-btn input:hover {
+            background: purple;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            width: 30%;
+        }
+        /* @media(max-width: 600px) {
+            .container {
+                min-width: 28px;
+            }
+            .user-input-box {
+                margin-bottom: 12px;
+            }
+            .user-input-box :nth-child(2n) {
+                justify-content: space-between;
+            }
+            .main-user-info {
+                max-height: 380px;
+                overflow: auto;
+            }
+            .main-user-info::-webkit-scrollbar {
+                width: 0;
+            }
+        } */ 
+        .active{
+        color: rebeccapurple;
+       }
+
+       body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        *{
+          margin: 0; 
+          padding: 0;
+          box-sizing: border-box;
+
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10%;
+            padding:20px 120px ;
+            padding-left: 5%;
+            background: #11141a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .logo{
+            font-size: 50px;
+            color: aliceblue;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav a{
+            font-size: 18px;
+            color: aliceblue;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+        nav a:hover{
+            color:#0ef;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <a href=" " class="logo" >STOCK MARKET</a>
+
+        <nav>
+            <a href="/home">HOME</a>
+            <a href="/register" class="active">REGISTER</a>
+            <a href="/login" >LOGIN</a>
+            
+       
+        </nav>
+    </header>
+   
+
+
+    <div class="container">
+        <div class="formtitle">
+            <h1>Registration form</h1>
+            <form action="" method="POST" autocomplete="off">
+                <div class="main-user-info">
+                    <div class="user-input-box">
+
+                        <label>Username:</label>
+                        <br>
+                        <input type="text" name="username" id="fullname" required="" placeholder="Enter your name">
+                        <br><br>
+                        <label>Email-id:</label>
+                        <br>
+                        <input type="email" name="email" id="fullname" required="" placeholder="Enter your Email-id">
+                        <br><br>
+                        <label>Password:</label>
+                        <br>
+                        <input type="password" name="password" id="password" required="" placeholder="Enter your password">
+                        <br><br>
+                        <label>Confirm password:</label>
+                        <br>
+                        <input type="password" name="password" id="password" required="" placeholder="Enter your correct password">
+                        <br><br>
+
+                        <label>Phone number:</label>
+                        <br>
+                        <input type="phonenumber" name="phno" required="" required="" placeholder="Enter your phone number">
+                        <br><br>
+                    </div>
+                    <div class="form-submit-btn">
+                        <input type="submit" value="Register">
+                    </div>
+                </div>
+            </form>
+
+            <h3>{{msg}}</h3>
+        </div>
+    </div>
+</body>
+
+</html>

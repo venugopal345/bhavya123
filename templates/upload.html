@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        *{
+          margin: 0; 
+          padding: 0;
+          box-sizing: border-box;
+
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 12%;
+            padding:20px 120px ;
+            padding-left: 5%;
+            background: #11141a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .logo{
+            font-size: 50px;
+            color: aliceblue;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav a{
+            font-size: 15px;
+            color: aliceblue;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+        nav a:hover{
+            color:#0ef;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1f242d;
+            color: #fff;
+            font-weight: 700;
+        }
+        /* section:nth-child(odd){
+            background: red;
+        }
+         */
+      
+        
+        
+        
+       
+        .container{
+            width: 100%;
+            height: 60vh;
+            background-image: url("../static/image6.jpg");
+            background-size: cover;
+            background-position: center;
+            /* background-color: rgba(0, 0, 0, 0.8); */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            height: 100vh;
+            /* position: absolute; */
+            padding-top: 200px;
+        }
+        
+        .text {
+            text-align: center;
+            padding: 170px 50px;
+            color:black;
+            text-shadow: yellow;
+            animation: ani 1s;
+        }
+        
+        .text h2 {
+            font-size: 70px;
+            margin-bottom: 30px;
+            color: black;
+        }
+        
+        @keyframes ani {
+            0% {
+                transform: scale(0.45);
+            }
+            100% {
+                transform: scale();
+            }
+        }
+        
+        .text p {
+            font-size: 70px;
+            margin-bottom: 30px;
+        }
+        
+       .div h1{
+       color: black;
+       }
+        
+        
+        
+        .up {
+            color: black;
+            padding-bottom: 40px;
+            padding-left: 10px;
+            width: 90%;
+        }
+        .text p {
+            font-size: 70px;
+            margin-bottom: 30px;
+        }
+        .text {
+            color: black;
+        text-shadow: 4px 4px 4px pink;
+       }
+      
+      .up{
+        color: orangered;
+        padding-bottom: 40px;
+        padding-left: 10px;
+        width: 90%;
+      }
+     
+      .div{
+        text-align: center;
+        padding-top:40px ;
+        justify-content: center;
+      }
+      form.myform{
+        font-size:20px;
+        padding-right: 15px;
+      }
+       .btn{
+            
+            color: aliceblue;
+            background-color: green;
+            border:1px solid transparent;
+            padding: 0.375rem 0.75rem ;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+        }
+        
+        .btn:hover{
+            cursor: pointer;
+            color: black;
+            background-color: cadetblue;
+            transition-duration: 0.15s;
+            border:1px solid transparent;
+            transition-timing-function: ease-in-out;
+            padding: 0.375rem 0.75rem ;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+        }
+        .active{
+        color: rebeccapurple;
+       }
+   
+    </style>
+</head>
+<body>
+  <header>
+    <a href=" " class="logo" >STOCK MARKET</a>
+
+    <nav>
+        <a href="/home">HOME</a>
+        <a href="/register">REGISTER</a>
+        <a href="/login">LOGIN</a>
+        <a href="/abstract">ABSTRACT</a>
+        <a href="/upload" class="active">UPLOAD</a>
+        <a href="/preview">PREVIEW</a>
+
+
+    </nav>
+</header>
+
+
+<section>
+    <div class="container">
+        
+            <div class="text">
+                <h2><span class="class"> PREDICTING STOCK MARKET TRENDS</span></h2>
+                <p> USING DIFFERENT ALGORITHM</p>
+            </div>
+        
+    </div>   
+
+</section>
+
+    <div class="div">
+        <h1 class="up">UPLOAD</h1>
+    <form action="/preview" method="post" enctype="multipart/form-data" class="myform"><br/>
+        <input type="file" name="datasetfile" id="file1" required/><br/><br/><br/>
+    <input  type="Submit"  class="btn" value="upload" />
+       </form></div>
+</body>
+</html>
